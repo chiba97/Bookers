@@ -13,3 +13,57 @@
  *= require_tree .
  *= require_self
  */
+ *{
+   margin:0;
+   padding:0;
+   box-sizing: border-box;
+ }
+ 
+ /*top-page*/
+ .top{
+   width: 1134px;
+   height:171px;
+   margin:33px;
+ }
+ .top-heading{
+   margin:17.42px 0;
+ }
+ .top-comment{
+   margin:33px;
+ }
+ .top-comment2{
+   margin:33px;
+ }
+ .top-link{
+   color: #000;
+   margin:33px;
+ }
+
+
+/*index-page*/
+.index{
+  margin:33px;
+}
+.index-title{
+  margin:17.42px 0;
+}
+.table-title{
+    padding: 1px 1px 5px;
+}
+
+
+/*new-page*/
+.new-title{
+    margin:16.185px 0;
+}
+.field1{
+    margin:0 0 10px;
+}
+.field2{
+    margin:0 0 10px;
+}
+
+.actions{
+    display: block;
+    margin:0 0 10px;
+}
