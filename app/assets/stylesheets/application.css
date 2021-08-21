@@ -50,6 +50,26 @@
 .table-title{
     padding: 1px 1px 5px;
 }
+.title-td{
+    margin:33px;
+    padding:1px 5px 7px;
+}
+.body-td{
+    margin:33px;
+    padding:1px 5px 7px;
+}
+.show-td{
+    margin:33px;
+    padding:1px 5px 7px;
+}
+.edit-td{
+    margin:33px;
+    padding:1px 5px 7px;
+}
+.destroy-td{
+    margin:33px;
+    padding: 1px 5px 7px
+}
 
 
 /*new-page*/
