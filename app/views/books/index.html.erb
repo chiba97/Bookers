@@ -1,4 +1,5 @@
 <div class="index">
+
 <h1 class="index-title">Books</h1>
 <table class="index-table"> 
   <thead>
@@ -8,20 +9,27 @@
      <th colspan="3"></th>
     </tr>
   </thead>
- <% @books.each do |book| %>
   <tbody>
+ <% @books.each do |book| %>
     <tr>
      <td class="title-td"><%= book.title %></td>
      <td class="body-td"><%= book.body %></td>
-     <td class="show-td"><%= link_to "Show",book_path(book)%></td>
-     <td class="edit-td"><%= link_to "Edit",edit_book_path(book)%></td>
-     <td class="destroy-td"><%= link_to "Destroy", book_path(book),method: :delete%></td>
+     <td class="show-td"><%= link_to "Show",book_path(book.id)%></td>
+     <td class="edit-td"><%= link_to "Edit",edit_book_path(book.id)%></td>
+     <td class="destroy-td"><%= link_to "Destroy", book_path(book.id),method: :delete%></td>
     </tr>
-  </tbody>
  <% end %>
+  </tbody>
 </table>
 
 <h2 class="new-title">New Book</h2>
+
+<% if @book.errors.any? %>
+ <%= @book.errors.count%>件のエラーが発生しました
+  <%= @book.errors.full_messages.each do |message|%>
+   <%= message %>
+  <% end %>
+<% end %>
 
 <%= form_with model:@book,local:true do |f|%>
 
