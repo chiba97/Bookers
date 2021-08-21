@@ -18,7 +18,9 @@
    padding:0;
    box-sizing: border-box;
  }
- 
+ .notice{
+   color:#008000;
+ }
  /*top-page*/
  .top{
    width: 1134px;
@@ -86,4 +88,20 @@
 .actions{
     display: block;
     margin:0 0 10px;
+}
+
+/*show-page*/
+.show{
+  margin:33px;
+}
+.show-title{
+  margin: 33px
+}
+.show-body{
+  margin:33px;
+}
+
+/*edit-page*/
+.edit{
+  margin: 33px
 }
