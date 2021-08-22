@@ -18,11 +18,39 @@
    padding:0;
    box-sizing: border-box;
  }
+ 
+ 
+ 
+ textarea{
+  padding: 2px;
+ }
  .notice{
+   margin:33px;
    color:#008000;
  }
+ lavel{
+    display: block;
+ }
+ input{
+     padding: 1px 2px
+ }
+ 
+a{
+    color: #000;
+}
+a:hover{
+    color: white;
+    background-color: #000;
+}
+
+
+
  /*top-page*/
  .top{
+     color: #333333;
+   font-family: verdana, arial, helvetica, sans-serif;
+   font-size: 13px;
+   line-height: 18px;
    width: 1134px;
    height:171px;
    margin:33px;
@@ -42,8 +70,13 @@
  }
 
 
+
 /*index-page*/
 .index{
+  color: #333333;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
   margin:33px;
 }
 .index-title{
@@ -74,7 +107,9 @@
 }
 
 
-/*new-page*/
+
+
+/*index.new-page*/
 .new-title{
     margin:16.185px 0;
 }
@@ -90,8 +125,15 @@
     margin:0 0 10px;
 }
 
+
+
+
 /*show-page*/
 .show{
+  color: #333333;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
   margin:33px;
 }
 .show-title{
@@ -101,7 +143,16 @@
   margin:33px;
 }
 
+
+
+
+
 /*edit-page*/
 .edit{
+  color: #333333;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
   margin: 33px
 }
+

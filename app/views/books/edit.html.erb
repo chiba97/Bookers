@@ -2,30 +2,30 @@
  <h1 class="new-title">Editing Book</h1>
  
  <% if @book.errors.any? %>
-  <%= @book.errors.count%>件のエラーが発生しました
-   <%= @book.errors.full_messages.each do |message|%>
-    <%= message %>
-   <% end %>
- <% end %>
+    <%= @book.errors.count %>error prohibited this book from being saved:<br>
+     <% @book.errors.full_messages.each do |message| %>
+      ・<%= message %>
+  　　<% end %>
+<% end %>
 
  <%= form_with model:@book,local:true do |f|%>
 
-   <div class="field1">
-    <h5>Title</h5>
-    <%= f.text_field:title %>
-   </div>
+  <div class="field1">
+   <lavel>Title</lavel>
+   <%= f.text_field:title %>
+  </div>
 
   <div class="field2">
-    <h5>Body</h5>
-    <%= f.text_area:body %>
+   <lavel>Body</lavel>
+   <%= f.text_area:body %>
   </div>
 
   <div class="actions">
    <%= f.submit "Update Book"%>
   </div>
-<% end %>
+ <% end %>
 
-<%= link_to "Show",book_path(@book)%>
-|
-<%= link_to"Back",books_path%>
+ <%= link_to "Show",book_path(@book)%>
+ |
+ <%= link_to"Back",books_path%>
 </div>

@@ -1,56 +1,46 @@
 class BooksController < ApplicationController
-  def index
-    @books = Book.all
-    
-    @book = Book.new
-  end
   
-  def create
-    book = Book.new(book_params)
-    book.save
-    redirect_to book_path(book.id)
-  end
+ def index
+   @books = Book.all
+   @book = Book.new
+ end
   
-  def create
-    @book = Book.new(book_params)
+ def create
+   @books = Book.all
+   @book = Book.new(book_params)
     if @book.save
-      redirect_to book_path(@book.id),notice:"Book was successfully created"
+     redirect_to book_path(@book.id),notice:"Book was successfully created."
     else 
-      render:index
+     render :index
     end
-  end
+ end
   
+ def show
+   @book = Book.find(params[:id])
+ end
 
-  def show
-    @book = Book.find(params[:id])
-  end
-
-  def edit
-    @book = Book.find(params[:id])
-  end
+ def edit
+   @book = Book.find(params[:id])
+ end
   
-  def update
-    book = Book.find(params[:id])
-    book.update(book_params)
-    redirect_to book_path(book)
-  end
-  def update
-    @book = Book.find(params[:id])
-    if @book.update(book_params)
-      redirect_to book_path(@book.id),notice:"Book was successfully updated"
-    else 
-      render:edit
-    end
-  end
   
-  def destroy
-    book = Book.find(params[:id])
-    book.destroy
-    redirect_to books_path
-  end
+ def update
+  @book = Book.find(params[:id])
+   if @book.update(book_params)
+    redirect_to book_path(@book),notice:"Book was successfully updated."
+   else 
+    render:edit
+   end
+ end
   
-  private
+ def destroy
+   book = Book.find(params[:id])
+   book.destroy
+   redirect_to books_path
+ end
+  
+ private
   def book_params
-    params.require(:book).permit(:title,:body)
+   params.require(:book).permit(:title,:body)
   end
 end
